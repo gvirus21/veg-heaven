@@ -42,6 +42,39 @@
     display: block;
   }
 }
+.heroSection {
+  height: 40em;
+  width: 100vw;
+  background-color: #fdd2bf;
+}
+
+.heroSectionContainer {
+  background-color: #ffe6e6;
+  height: 40em;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.HeroHeading {
+  color: #012443;
+}
+
+.ProductContainer {
+  height: 30em;
+  max-width: 80vw;
+  background-color: #ff4848;
+}
+
+.productCard {
+  height: 20em;
+  width: 15em;
+  border-radius: 20px;
+  background-color: #ffe6e6;
+}
+
 * {
   margin: 0;
   padding: 0;
