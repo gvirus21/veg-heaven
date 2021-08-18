@@ -1,21 +1,19 @@
 import React from "react";
 import ProductCard from "./ProductCard";
-import itemData from "../../data.json";
-import FilterInput from "./FilterInput";
+import { FilterInput } from "./FilterInput";
 
-const HeroSection = () => {
-  // console.log(itemData);
-
+const HeroSection = ({ filteredData, setFilteredData }) => {
+  console.log(filteredData);
   return (
     <div className="heroSection">
       <div className="heroSectionContainer">
         <div className="upperHeroSection">
           <h1 className="HeroHeading">Featured Products</h1>
-          <FilterInput />
+          <FilterInput setFilteredData={setFilteredData} />
         </div>
 
         <div className="ProductContainer">
-          {itemData.map((item) => (
+          {filteredData.map((item) => (
             <ProductCard item={item} id={item.id} />
           ))}
         </div>
