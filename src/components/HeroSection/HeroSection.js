@@ -8,6 +8,9 @@ const HeroSection = () => {
         <h1 className="HeroHeading">Featured Products</h1>
         <div className="ProductContainer">
           <ProductCard></ProductCard>
+          <ProductCard></ProductCard>
+          <ProductCard></ProductCard>
+          <ProductCard></ProductCard>
         </div>
       </div>
     </div>

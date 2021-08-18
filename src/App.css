@@ -60,12 +60,17 @@
 
 .HeroHeading {
   color: #012443;
+  display: inline-block;
+  margin: 0 3em;
 }
 
 .ProductContainer {
-  height: 30em;
+  height: 25em;
   max-width: 80vw;
   background-color: #ff4848;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .productCard {
@@ -73,6 +78,7 @@
   width: 15em;
   border-radius: 20px;
   background-color: #ffe6e6;
+  margin: 1em;
 }
 
 * {
