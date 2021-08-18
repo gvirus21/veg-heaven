@@ -43,10 +43,9 @@
   }
 }
 .heroSection {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
-  background-color: #fdd2bf;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .heroSectionContainer {
@@ -62,7 +61,7 @@
 .HeroHeading {
   color: #012443;
   display: inline-block;
-  margin: 0 3em;
+  margin: 0 2em;
 }
 
 .ProductContainer {
@@ -134,6 +133,31 @@
   margin: 0.5em 0;
 }
 
+.categoryFilter {
+  width: 10em;
+  outline: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  margin: 0 2em;
+}
+
+.upperHeroSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+  .HeroHeading {
+    text-align: center;
+    margin: 1em 0;
+  }
+
+  .upperHeroSection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -142,6 +166,7 @@
 
 body {
   font-family: "Roboto";
+  overflow-y: hidden;
 }
 
 /*# sourceMappingURL=App.css.map */

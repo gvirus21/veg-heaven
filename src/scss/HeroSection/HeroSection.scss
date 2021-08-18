@@ -1,8 +1,7 @@
 .heroSection {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
-  background-color: #fdd2bf;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .heroSectionContainer {
@@ -19,14 +18,13 @@
 .HeroHeading {
   color: #012443;
   display: inline-block;
-  margin: 0 3em;
+  margin: 0 2em;
 }
 
 .ProductContainer {
   height: 28em;
   width: 70vw;
   margin: 0 auto;
-  // background-color: aliceblue;
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
@@ -91,4 +89,29 @@
   font-size: 0.8em;
   font-weight: 400;
   margin: 0.5em 0;
+}
+
+.categoryFilter {
+  width: 10em;
+  outline: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  margin: 0 2em;
+}
+
+.upperHeroSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+  .HeroHeading {
+    text-align: center;
+    margin: 1em 0;
+  }
+  .upperHeroSection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
