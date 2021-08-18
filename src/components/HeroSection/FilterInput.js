@@ -1,10 +1,9 @@
-import React from "react";
-// import { option } from "yargs";
+import React, { useState, useEffect } from "react";
 import data from "../../data.json";
 
 const FilterInput = () => {
-  // const catagories =
-
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [processedData, setProcessedData] = useState(data);
   const categoriesSet = new Set(
     data.map((item) => {
       return item.category;
@@ -14,13 +13,34 @@ const FilterInput = () => {
   const categories = Array.from(categoriesSet);
   categories.unshift("All");
 
-  console.log(categories);
+  // let processedData = data;
 
+  useEffect(() => {
+    if (selectedCategory === "All") {
+      setProcessedData("All");
+    } else {
+      setProcessedData(
+        data.filter((item) => {
+          return item.category === selectedCategory;
+        })
+      );
+    }
+  }, [selectedCategory]);
+
+  // console.log(processedData);
   return (
-    <select name="categoryFilter" className="categoryFilter">
+    <select
+      name="categoryFilter"
+      className="categoryFilter"
+      onChange={(e) => {
+        const selected = e.target.value;
+        setSelectedCategory(selected);
+      }}
+    >
       {categories.map((category) => {
         return <option value={category}>{category}</option>;
       })}
+      {/* {console.log(selectedCategory)} */}
     </select>
   );
 };
