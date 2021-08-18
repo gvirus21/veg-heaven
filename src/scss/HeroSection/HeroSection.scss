@@ -1,7 +1,8 @@
 .heroSection {
-  height: 40em;
+  height: 100vh;
   width: 100vw;
   background-color: #fdd2bf;
+  overflow-y: hidden;
 }
 
 .heroSectionContainer {
@@ -22,10 +23,10 @@
 }
 
 .ProductContainer {
-  height: 25em;
+  height: 28em;
   width: 70vw;
   margin: 0 auto;
-  background-color: aliceblue;
+  // background-color: aliceblue;
   overflow-x: scroll;
   overflow-y: hidden;
   display: flex;
@@ -47,4 +48,47 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.productCard div {
+  height: 30px;
+  background-color: #333;
+  width: 30px;
+}
+
+.productCard img {
+  height: 12em;
+  width: 12em;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: -1em;
+}
+.productCard h1 {
+  font-size: 1em;
+  margin: 1em 0;
+  color: #004ba0;
+  font-weight: 500;
+}
+
+.productCard button {
+  margin: 1em 0;
+  padding: 0.5em 1.3em;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  background-color: #ffe6e6;
+
+  &:hover {
+    background-color: darken($color: #ffe6e6, $amount: 5);
+  }
+  &:active {
+    background-color: darken($color: #ffe6e6, $amount: 2);
+  }
+}
+
+.productCard h2 {
+  font-size: 0.8em;
+  font-weight: 400;
+  margin: 0.5em 0;
 }
