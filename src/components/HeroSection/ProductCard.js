@@ -7,14 +7,15 @@ import orange from "../../images/Oranges.jpg";
 const ProductCard = ({ item }) => {
   const { name, id, price, available } = { ...item };
   const [stock, setStock] = useState("Out of stock");
+  const [availability, setAvailability] = useState(available);
 
   useEffect(() => {
-    if (available) {
+    if (availability) {
       setStock("In Stock");
     } else {
       setStock("Out of stock");
     }
-  }, []);
+  }, [availability]);
 
   const imgArr = [];
   imgArr.push(potato, banana, drumstick, orange);
@@ -24,9 +25,15 @@ const ProductCard = ({ item }) => {
       <img src={imgArr[id - 1]} alt={name} />
       <h1>{name}</h1>
       <p>price: ₹{price}</p>
-      {/* <h2 style={{ color: { available } && "green" }}>{stock}</h2> */}
-      <h2 style={{ color: available ? "green" : "red" }}>{stock}</h2>
-      <button style={{ opacity: available ? "100%" : "0" }}>Buy Now</button>
+      <h2 style={{ color: availability ? "green" : "red" }}>{stock}</h2>
+      <button
+        style={{ opacity: availability ? "100%" : "0" }}
+        onClick={() => {
+          setAvailability(availability - 1);
+        }}
+      >
+        Buy Now
+      </button>
     </div>
   );
 };
