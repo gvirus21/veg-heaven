@@ -27,8 +27,11 @@ const ProductCard = ({ item }) => {
       <p>price: ₹{price}</p>
       <h2 style={{ color: availability ? "green" : "red" }}>{stock}</h2>
       <button
-        style={{ opacity: availability ? "100%" : "0" }}
-        onClick={() => {
+        style={{
+          opacity: availability ? "100%" : "0",
+          pointerEvents: availability ? "auto" : "none",
+        }}
+        onClick={(e) => {
           setAvailability(availability - 1);
         }}
       >
