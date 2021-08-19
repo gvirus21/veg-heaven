@@ -23,7 +23,7 @@ export const FilterInput = ({ setFilteredData }) => {
         })
       );
     }
-  }, [selectedCategory]);
+  });
 
   return (
     <select
