@@ -3,7 +3,6 @@ import data from "../../data.json";
 
 export const FilterInput = ({ setFilteredData }) => {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  // const [processedData, setProcessedData] = useState(data);
 
   const categoriesSet = new Set(
     data.map((item) => {
