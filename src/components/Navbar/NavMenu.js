@@ -5,16 +5,16 @@ const NavMenu = () => {
   return (
     <ul className="NavMenu">
       <li>
-        <a href="#">Home</a>
+        <a href="">Home</a>
       </li>
       <li>
-        <a href="#">MarketPlace</a>
+        <a href="">MarketPlace</a>
       </li>
       <li>
-        <a href="#">Feedback</a>
+        <a href="">Feedback</a>
       </li>
       <li>
-        <a href="#">Contact us</a>
+        <a href="">Contact us</a>
       </li>
     </ul>
   );
